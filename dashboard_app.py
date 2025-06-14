@@ -7,14 +7,6 @@ import unidecode
 from dateutil import parser
 from requests.auth import HTTPBasicAuth
 
-# Lê as credenciais do Streamlit Cloud
-org_id = st.secrets["lrs"]["org_id"]
-user   = st.secrets["lrs"]["user"]
-pw     = st.secrets["lrs"]["pass"]
-
-# Monta o HTTPBasicAuth e endpoint base
-AUTH     = HTTPBasicAuth(user, pw)
-BASE_URL = f"https://watershedlrs.com/watershed/api/organizations/{org_id}/lrs/statements"
 
 # ─── Autenticação ────────────────────────────────────────────────
 # define aqui as tuas credenciais (username: password)
